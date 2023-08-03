@@ -11,7 +11,7 @@
 ## See the website live [here](https://customconnections.io)
 
 <p align="center">
-    <img src="assets/example.jpg?raw=true" alt="Example image of site">
+    <img src="assets/example.JPG?raw=true" alt="Example image of site">
 </p>
 
 ## About 📖

@@ -1,9 +1,9 @@
 <h1 align="center">CustomConnections.io</h1>
 <p align="center">
-    <a href="https://github.com/imaadf/customconnections.io/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/imaadf/customconnections.io"></a>
-    <a href="https://github.com/imaadf/customconnections.io/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/imaadf/customconnections.io"></a>
-    <a href="https://github.com/imaadf/customconnections.io/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/imaadf/customconnections.io"></a>
-    <a href="https://github.com/imaadf/customconnections.io/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/imaadf/customconnections.io"></a>
+    <a href="https://github.com/imaad-f/customconnections.io/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/imaad-f/customconnections.io"></a>
+    <a href="https://github.com/imaad-f/customconnections.io/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/imaad-f/customconnections.io"></a>
+    <a href="https://github.com/imaad-f/customconnections.io/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/imaad-f/customconnections.io"></a>
+    <a href="https://github.com/imaad-f/customconnections.io/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/imaad-f/customconnections.io"></a>
 </p>
 
 #
@@ -27,11 +27,12 @@ CustomConnections.io is an online game inspired by The New York Times's online C
 Clone the repository and install the dependencies:
 
 ```shell
-git clone https://github.com/imaadf/customconnections.io.git
+git clone https://github.com/imaad-f/customconnections.io.git
 cd customconnections.io
 npm install
 ```
 
+Update server.js
 To start the development server:
 
 ```shell
@@ -42,7 +43,7 @@ And you're ready to go!
 
 ## Contributing 💡
 
-If you would like to help contribute please don't hesitate to open a [pull request](https://github.com/imaadf/customconnections.io/pulls) or [issue](https://github.com/imaadf/customconnections.io/issues).
+If you would like to help contribute please don't hesitate to open a [pull request](https://github.com/imaad-f/customconnections.io/pulls) or [issue](https://github.com/imaad-f/customconnections.io/issues).
 
 ## Credits ✨
 

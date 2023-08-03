@@ -55,7 +55,7 @@ const InfoIcon = () => {
                     <p className="px-4 py-2">Got a problem or an idea? <a href="mailto:customconnectionsio@gmail.com" className={`underline ${isDarkMode ? 'text-indigo-400' : 'text-indigo-500'} transition-colors duration-500`}><AiOutlineArrowRight className="inline w-4 h-4" /> Drop me an email</a>.</p>
                     <hr className="border-gray-400 mx-4" />
                     <a href="https://www.buymeacoffee.com/imaad" className={`flex items-center space-x-2 px-4 py-2 hover:bg-indigo-500 hover:text-white ${isDarkMode ? 'text-white' : 'text-black'} transition-colors duration-500`}><AiOutlineCoffee className="w-5 h-5" /><span>Enjoying the game? Buy me a coffee - sincerely a broke college student</span></a>
-                    <a href="https://github.com/imaadf/customconnections.io" className={`flex items-center space-x-2 px-4 py-2 hover:bg-indigo-500 hover:text-white ${isDarkMode ? 'text-white' : 'text-black'} transition-colors duration-500`}><AiFillGithub className="w-5 h-5" /><span>Check out and star the github repository</span></a>
+                    <a href="https://github.com/imaad-f/customconnections.io" className={`flex items-center space-x-2 px-4 py-2 hover:bg-indigo-500 hover:text-white ${isDarkMode ? 'text-white' : 'text-black'} transition-colors duration-500`}><AiFillGithub className="w-5 h-5" /><span>Check out and star the github repository</span></a>
                 </div>
             )}
         </div>

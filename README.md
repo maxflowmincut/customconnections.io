@@ -8,6 +8,8 @@
 
 #
 
+## See the website live [here](https://customconnections.io)
+
 ## About 📖
 
 CustomConnections.io is an online game inspired by The New York Times's online Connections [game](https://www.nytimes.com/games/connections), which in turn is based on the British TV show quiz 'Only Connect'. It was developed using React, TypeScript, Express, Node.js, Tailwind CSS and MongoDB for the backend, and Docker to containerize. 
@@ -29,14 +31,18 @@ Clone the repository and install the dependencies:
 ```shell
 git clone https://github.com/imaad-f/customconnections.io.git
 cd customconnections.io
+cd client
+npm install
+cd ../server
 npm install
 ```
 
-Update server.js
-To start the development server:
+Then update server.js and/or set your environmental variables to connect to a database
+Create a docker file to build the application with the environmental variables you have set
 
 ```shell
-npm run dev
+docker build -t username/tag .
+docker run -e "DB_CLUSTER=?" -e "PORT=?" -e "DB_USERNAME=?" -e "DB_PASSWORD=?" -e "NODE_ENV=?" -e "LOGGING=?" -p port:port username/tag
 ```
 
 And you're ready to go!

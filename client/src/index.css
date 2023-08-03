@@ -1,0 +1,23 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+[data-theme="light"] {
+  --bg-primary: #f8f8f8;
+  --text-primary: #1a1a1a;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #1a1a1a;
+  --text-primary: #e6e6e6;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}

@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "LibreFranklin-Black";
+    src: url('./assets/LibreFranklin-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+.font-custom {
+    font-family: "LibreFranklin-Black", sans-serif;
+}
+
+@font-face {
+    font-family: "LibreFranklin-SemiBold";
+    src: url('./assets/LibreFranklin-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+.font-custom-2 {
+    font-family: "LibreFranklin-SemiBold", sans-serif;
+}

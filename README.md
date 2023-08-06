@@ -41,7 +41,7 @@ cd ../server
 npm install
 ```
 
-Then update server.js and/or set your environmental variables to connect to a database
+Then update server.js and set your environmental variables\
 Create a docker file to build the application with the environmental variables you have set
 
 ```shell

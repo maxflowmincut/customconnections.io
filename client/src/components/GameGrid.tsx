@@ -22,9 +22,36 @@ interface GameGridProps {
     rowNames: string[];
 }
 
+const useWindowSize = () => {
+    const [windowSize, setWindowSize] = useState({
+        width: window.innerWidth,
+        height: window.innerHeight,
+    });
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowSize({
+                width: window.innerWidth,
+                height: window.innerHeight,
+            });
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    return windowSize;
+}
+
 const GameGrid: React.FC<GameGridProps> = ({ values, onRectangleClick, selectedIndices, submitClicked, completedCategories, rowNames }) => {
-    const rectangleWidth = 150;
-    const rectangleHeight = 80;
+    const { width } = useWindowSize();
+    const rectangleWidth = width < 768 ? 90 : 150;
+    const rectangleHeight = width < 768 ? 48 : 80;
+
+    const completedFontSize = width < 768 ? 15 : 20;
+    const completedSubtextFontSize = width < 768 ? 10 : 15;
+
+
     const margin = 4;
     const columns = 4;
     const [positions, setPositions] = useState<{ x: number; y: number }[]>([]);
@@ -121,11 +148,13 @@ const GameGrid: React.FC<GameGridProps> = ({ values, onRectangleClick, selectedI
                             width: columns * rectangleWidth + (columns - 1) * margin,
                             height: rectangleHeight,
                             transform: `translate(0px, ${position * (rectangleHeight + margin)}px)`,
-                            fontSize: 20
+                            fontSize: completedFontSize
                         }}
                     >
-                        <div>{rowNames[category]}</div>
-                        <div className="font-custom-2" style={{ fontSize: 15 }}>{itemsInCategory.join(', ')}</div>
+                        <div className="flex flex-col items-center justify-center space-y-1 h-full">
+                            <div>{rowNames[category]}</div>
+                            <div className="font-custom-2" style={{ fontSize: completedSubtextFontSize }}>{itemsInCategory.join(', ')}</div>
+                        </div>
                     </animated.div>
                 );
             })}

@@ -28,7 +28,7 @@ const InfoIcon = () => {
     }, [isDarkMode, showMenu]);
 
     return (
-        <div className="relative z-20">
+        <div className="relative z-20 hidden md:block">
             <AiOutlineQuestionCircle className={`h-10 w-10 cursor-pointer ${isDarkMode ? 'text-white' : 'text-black'} transition-colors duration-500`} onClick={() => setShowMenu(!showMenu)} />
             {visible && (
                 <div className={menuClasses}>

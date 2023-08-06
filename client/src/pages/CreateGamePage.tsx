@@ -20,6 +20,32 @@ const CreateGamePage = () => {
     const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
     const [lives, setLives] = useState(4);
     const [gameLink, setGameLink] = useState<string | null>(null);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const scaleStyles = windowWidth <= 768 ? {
+        transform: 'scale(0.44) translateX(63%)',
+        transformOrigin: 'top left'
+    } : {};
+
+    const rectangleStyles = windowWidth <= 768 ? {
+        fontSize: '16px'
+    } : {};
+
+    const headerStyles = windowWidth <= 768 ? {
+        fontSize: '18px'
+    } : {};
+
 
     const handleChange = (event: FormEvent<HTMLInputElement>, index: number) => {
         const newValues = [...texts];
@@ -96,11 +122,12 @@ const CreateGamePage = () => {
                         display: 'grid',
                         gridTemplateColumns: '200px repeat(4, 1fr)',
                         rowGap: '0.75rem',
-                        columnGap: '10px'
+                        columnGap: '10px',
+                        ...scaleStyles
                     }}
                 >
-                    <h2 className="col-span-1 text-center text-2xl font-bold">Category</h2>
-                    <h2 className="col-span-4 text-center text-2xl font-bold">Items</h2>
+                    <h2 className="col-span-1 text-center text-2xl font-bold" style={headerStyles}>Category</h2>
+                    <h2 className="col-span-4 text-center text-2xl font-bold" style={headerStyles}>Items</h2>
                     {Array.from({ length: rows }).map((_, rowIndex) => (
                         <>
                             <div
@@ -112,9 +139,9 @@ const CreateGamePage = () => {
                                 style={{
                                     backgroundColor: '#5A594E',
                                     fontFamily: 'LibreFranklin-Black',
-                                    fontSize: '20px',
                                     fontWeight: 900,
                                     lineHeight: '1.15',
+                                    ...rectangleStyles
                                 }}
                             >
                                 <div
@@ -154,7 +181,8 @@ const CreateGamePage = () => {
                                             fontWeight: 900,
                                             lineHeight: '1.15',
                                             overflow: 'hidden',
-                                            padding: '0'
+                                            padding: '0',
+                                            ...rectangleStyles
                                         }}
                                     >
                                         <div

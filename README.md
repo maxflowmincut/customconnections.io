@@ -16,7 +16,7 @@
 
 ## About 📖
 
-CustomConnections.io is an online game inspired by The New York Times's online Connections [game](https://www.nytimes.com/games/connections), which in turn is based on the British TV show quiz 'Only Connect'. It was developed using React, TypeScript, Express, Node.js, Tailwind CSS and MongoDB for the backend, and Docker to containerize. 
+CustomConnections.io is an online game inspired by The New York Times's online Connections [game](https://www.nytimes.com/games/connections), which in turn is based on the British TV show quiz 'Only Connect'. It was developed using the MERN stack supplemented with typescript and tailwind. 
 
 ## Technologies used 🛠️
 

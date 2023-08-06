@@ -41,12 +41,11 @@ const HomePage = () => {
                 <div className="flex flex-1 justify-center items-start flex-wrap">
                     {gameModes.map((mode, index) => (
                         <div key={index}
-                            className={`m-4 p-8 rounded-lg overflow-hidden shadow-2xl flex flex-col ${!mode.disabled && 'transition-all duration-500 ease-in-out transform hover:scale-105'}`}
+                            className={`m-4 p-8 rounded-lg overflow-hidden shadow-2xl flex flex-col ${!mode.disabled && 'transition-all duration-500 ease-in-out transform hover:scale-105'} md:max-w-md lg:max-w-lg w-full md:w-auto`}
                             style={{
                                 opacity: mode.disabled ? 0.5 : 1,
                                 minHeight: '450px',
                                 maxWidth: '350px',
-                                flex: 1,
                                 backgroundImage: isDarkMode ? 'linear-gradient(315deg, #2a2a72 0%, #009ffd 74%)' : 'linear-gradient(315deg, #d8d8d8 0%, #fafafa 74%)',
                             }}>
                             <h2 className="text-2xl font-bold mb-2 text-3d text-shadow">{mode.title}</h2>
@@ -64,6 +63,7 @@ const HomePage = () => {
             </div>
         </div>
     );
+
 };
 
 export default HomePage;

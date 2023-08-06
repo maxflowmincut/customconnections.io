@@ -41,6 +41,18 @@ const CustomGamePage = () => {
     const [showConfetti, setShowConfetti] = useState(false);
     const [submittedSets, setSubmittedSets] = useState<number[][]>([]);
     const [shake, setShake] = useState(false);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const closeGameOverPopup = () => {
         setGameOver(false);
@@ -275,6 +287,8 @@ const CustomGamePage = () => {
         )
     }
 
+    const isMobile = windowWidth < 768;
+
     return (
         <div className={`relative container mx-auto h-screen flex flex-col ${isDarkMode ? 'text-white' : 'text-black'}`}>
             <div ref={headerRef}>
@@ -307,7 +321,7 @@ const CustomGamePage = () => {
                 }
                 <div className="mt-4"></div>
                 <div className="flex items-center">
-                    <div className="text-2xl mr-4">Mistakes remaining:</div>
+                    <div className={`text-2xl mr-4 ${isMobile ? 'text-lg' : ''}`}>Mistakes remaining:</div>
                     <div className="flex items-center justify-center">
                         {Array.from({ length: previousLives }).map((_, i) => (
                             <div
@@ -321,19 +335,21 @@ const CustomGamePage = () => {
                 <div className="mt-4"></div>
                 <div className="flex justify-center space-x-4">
                     <button
-                        className={`rounded-lg py-3 px-10 shadow-lg text-xl tracking-wide font-semibold ${isDarkMode ? 'bg-white text-black' : 'bg-black text-white'} transform transition-transform duration-500 ease-in-out hover:scale-105 active:scale-95`}
+                        className={`rounded-lg py-3 px-10 shadow-lg text-xl tracking-wide font-semibold ${isDarkMode ? 'bg-white text-black' : 'bg-black text-white'} transform transition-transform duration-500 ease-in-out hover:scale-105 active:scale-95 ${isMobile ? 'py-2 px-3 text-sm' : ''}`}
                         onClick={handleShuffle}
                     >
                         Shuffle
                     </button>
+
                     <button
-                        className={`rounded-lg py-3 px-10 shadow-lg text-xl tracking-wide font-semibold ${isDarkMode ? 'bg-white text-black' : 'bg-black text-white'} transform transition-transform duration-500 ease-in-out hover:scale-105 active:scale-95`}
+                        className={`rounded-lg py-3 px-10 shadow-lg text-xl tracking-wide font-semibold ${isDarkMode ? 'bg-white text-black' : 'bg-black text-white'} transform transition-transform duration-500 ease-in-out hover:scale-105 active:scale-95 ${isMobile ? 'py-2 px-3 text-sm' : ''}`}
                         onClick={handleDeselectAll}
                     >
                         Deselect All
                     </button>
+
                     <button
-                        className={`rounded-lg py-3 px-10 shadow-lg text-xl tracking-wide font-semibold ${isDarkMode ? 'bg-white text-black' : 'bg-black text-white'} transform transition-transform duration-500 ease-in-out hover:scale-105 active:scale-95 ${lives === 0 || completedCategories.length === 4 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                        className={`rounded-lg py-3 px-10 shadow-lg text-xl tracking-wide font-semibold ${isDarkMode ? 'bg-white text-black' : 'bg-black text-white'} transform transition-transform duration-500 ease-in-out hover:scale-105 active:scale-95 ${lives === 0 || completedCategories.length === 4 ? 'opacity-50 cursor-not-allowed' : ''} ${isMobile ? 'py-2 px-3 text-sm' : ''}`}
                         onClick={handleSubmit}
                     >
                         Submit

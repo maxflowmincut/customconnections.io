@@ -1,14 +1,14 @@
 <h1 align="center">CustomConnections.io</h1>
 <p align="center">
-    <a href="https://github.com/imaad-f/customconnections.io/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/imaad-f/customconnections.io"></a>
-    <a href="https://github.com/imaad-f/customconnections.io/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/imaad-f/customconnections.io"></a>
-    <a href="https://github.com/imaad-f/customconnections.io/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/imaad-f/customconnections.io"></a>
-    <a href="https://github.com/imaad-f/customconnections.io/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/imaad-f/customconnections.io"></a>
+    <a href="https://github.com/maxflowmincut/customconnections.io/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/maxflowmincut/customconnections.io"></a>
+    <a href="https://github.com/maxflowmincut/customconnections.io/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/maxflowmincut/customconnections.io"></a>
+    <a href="https://github.com/maxflowmincut/customconnections.io/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/maxflowmincut/customconnections.io"></a>
+    <a href="https://github.com/maxflowmincut/customconnections.io/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/maxflowmincut/customconnections.io"></a>
 </p>
 
 #
 
-## See the website live [here](https://customconnections.io)
+## Website is currently not live but can usually be found [here](https://customconnections.io)
 
 <p align="center">
     <img src="assets/example.JPG?raw=true" alt="Example image of site">
@@ -33,7 +33,7 @@ CustomConnections.io is an online game inspired by The New York Times's online C
 Clone the repository and install the dependencies:
 
 ```shell
-git clone https://github.com/imaad-f/customconnections.io.git
+git clone https://github.com/maxflowmincut/customconnections.io.git
 cd customconnections.io
 cd client
 npm install
@@ -53,7 +53,7 @@ And you're ready to go!
 
 ## Contributing 💡
 
-If you would like to help contribute please don't hesitate to open a [pull request](https://github.com/imaad-f/customconnections.io/pulls) or [issue](https://github.com/imaad-f/customconnections.io/issues).
+If you would like to help contribute please don't hesitate to open a [pull request](https://github.com/maxflowmincut/customconnections.io/pulls) or [issue](https://github.com/maxflowmincut/customconnections.io/issues).
 
 ## Credits ✨
 
@@ -62,7 +62,3 @@ Website icon made by [ShareIcon](https://www.shareicon.net/social-normal-social-
 ## License 📄
 
 This project is licensed under GPL-3.0 - see the [LICENSE](./LICENSE) file for further details.
-
-## Support 🎁
-
-Give a ⭐️ if this project was of any help!
